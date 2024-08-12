@@ -460,7 +460,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     isPremium: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    url: Schema.Attribute.UID<'title'>;
+    slug: Schema.Attribute.UID<'title'>;
     image: Schema.Attribute.Media<'images'>;
     lessons: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
     createdAt: Schema.Attribute.DateTime;
