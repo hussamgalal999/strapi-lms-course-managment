@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lesson",
     "pluralName": "lessons",
-    "displayName": "Lesson"
+    "displayName": "Lesson",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,9 +17,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "content": {
-      "type": "blocks"
     },
     "slug": {
       "type": "uid",
@@ -35,6 +33,12 @@
       "relation": "manyToOne",
       "target": "api::course.course",
       "inversedBy": "lessons"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "resources": {
+      "type": "richtext"
     }
   }
 }

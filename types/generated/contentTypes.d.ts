@@ -463,6 +463,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'title'>;
     image: Schema.Attribute.Media<'images'>;
     lessons: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
+    content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -480,6 +481,7 @@ export interface ApiLessonLesson extends Struct.CollectionTypeSchema {
     singularName: 'lesson';
     pluralName: 'lessons';
     displayName: 'Lesson';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -487,10 +489,11 @@ export interface ApiLessonLesson extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    content: Schema.Attribute.Blocks;
     slug: Schema.Attribute.UID<'title'>;
     player: Schema.Attribute.DynamicZone<['elements.public-player']>;
     course: Schema.Attribute.Relation<'manyToOne', 'api::course.course'>;
+    content: Schema.Attribute.RichText;
+    resources: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

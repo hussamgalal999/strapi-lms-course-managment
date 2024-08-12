@@ -39,6 +39,9 @@
       "relation": "oneToMany",
       "target": "api::lesson.lesson",
       "mappedBy": "course"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }
