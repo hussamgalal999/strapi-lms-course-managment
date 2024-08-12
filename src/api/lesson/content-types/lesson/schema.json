@@ -30,11 +30,11 @@
         "elements.public-player"
       ]
     },
-    "courses": {
+    "course": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::course.course",
-      "mappedBy": "lesson"
+      "inversedBy": "lessons"
     }
   }
 }

@@ -26,11 +26,19 @@
       "type": "uid",
       "targetField": "title"
     },
-    "lesson": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "lessons": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::lesson.lesson",
-      "inversedBy": "courses"
+      "mappedBy": "course"
     }
   }
 }

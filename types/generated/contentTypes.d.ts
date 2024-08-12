@@ -461,7 +461,8 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     isPremium: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     url: Schema.Attribute.UID<'title'>;
-    lesson: Schema.Attribute.Relation<'manyToOne', 'api::lesson.lesson'>;
+    image: Schema.Attribute.Media<'images'>;
+    lessons: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -489,7 +490,7 @@ export interface ApiLessonLesson extends Struct.CollectionTypeSchema {
     content: Schema.Attribute.Blocks;
     slug: Schema.Attribute.UID<'title'>;
     player: Schema.Attribute.DynamicZone<['elements.public-player']>;
-    courses: Schema.Attribute.Relation<'oneToMany', 'api::course.course'>;
+    course: Schema.Attribute.Relation<'manyToOne', 'api::course.course'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
