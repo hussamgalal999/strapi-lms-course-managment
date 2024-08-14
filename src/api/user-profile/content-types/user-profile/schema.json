@@ -22,6 +22,15 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "userProfile"
+    },
+    "name": {
+      "type": "string"
+    },
+    "githubLink": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
     }
   }
 }
