@@ -12,6 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "githubLink": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
     "followedCourses": {
       "type": "relation",
       "relation": "oneToMany",
@@ -23,14 +32,10 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "userProfile"
     },
-    "name": {
-      "type": "string"
-    },
-    "githubLink": {
-      "type": "string"
-    },
-    "bio": {
-      "type": "text"
+    "completedLessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson"
     }
   }
 }

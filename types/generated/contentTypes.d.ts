@@ -72,6 +72,9 @@ export interface ApiUserProfileUserProfile extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    name: Schema.Attribute.String;
+    githubLink: Schema.Attribute.String;
+    bio: Schema.Attribute.Text;
     followedCourses: Schema.Attribute.Relation<
       'oneToMany',
       'api::course.course'
@@ -80,9 +83,10 @@ export interface ApiUserProfileUserProfile extends Struct.CollectionTypeSchema {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    name: Schema.Attribute.String;
-    githubLink: Schema.Attribute.String;
-    bio: Schema.Attribute.Text;
+    completedLessons: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lesson.lesson'
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
