@@ -1,16 +1,16 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
 export interface ElementsPublicPlayer extends Struct.ComponentSchema {
   collectionName: 'components_elements_public_players';
   info: {
-    displayName: 'Public Player';
     description: '';
+    displayName: 'Public Player';
   };
   attributes: {
-    videoId: Schema.Attribute.String;
-    videoUrl: Schema.Attribute.String;
     timecode: Schema.Attribute.Integer;
     title: Schema.Attribute.String;
+    videoId: Schema.Attribute.String;
+    videoUrl: Schema.Attribute.String;
   };
 }
 
