@@ -17,9 +17,9 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": " 5.3.0",
-    "@strapi/plugin-users-permissions": " 5.3.0",
-    "@strapi/strapi": " 5.3.0",
+    "@strapi/plugin-cloud": " 5.5.0",
+    "@strapi/plugin-users-permissions": " 5.5.0",
+    "@strapi/strapi": " 5.5.0",
     "better-sqlite3": "^11.1.2",
     "pg": "8.8.0",
     "react": "^18.0.0",
@@ -34,7 +34,7 @@
     "uuid": "23a78f4a-6005-40bc-9400-fc6026295153"
   },
   "engines": {
-    "node": ">=18.0.0 <=20.x.x",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
